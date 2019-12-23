@@ -9,7 +9,7 @@
         <p></p>
       </el-col>
       <el-col class="list-right" :span="8">
-        <el-image :src="src" fit="contain" style="width: 50%; height: 50%">
+        <el-image class="list-img" :src="src" fit="contain">
           <div slot="placeholder" class="image-slot">
             加载中
             <span class="dot">...</span>
@@ -37,6 +37,10 @@ export default {
 }
 .title {
   font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
 }
 .intor {
   overflow: hidden;
@@ -44,5 +48,11 @@ export default {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  cursor: pointer;
+}
+.list-img {
+  width: 50%;
+  height: 50%;
+  border-radius: 5px;
 }
 </style>

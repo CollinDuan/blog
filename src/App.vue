@@ -1,16 +1,12 @@
 <template>
   <div id="app">
-    <index></index>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import index from './view/index'
 export default {
-  name: 'App',
-  components: {
-    index
-  }
+  name: 'App'
 }
 </script>
 
@@ -24,7 +20,7 @@ body {
   height: 100%;
 }
 #app {
-  font-family: 'Hiragino Sans GB';
+  font-family: "Hiragino Sans GB";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
